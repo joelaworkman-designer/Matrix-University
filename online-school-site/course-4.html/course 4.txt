@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Course 1 | My Online School</title>
+  <meta name="description" content="Course 1 details and lessons." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="dot"></span>
+      <span>My Online School</span>
+    </a>
+    <div class="navlinks">
+      <a class="chip" href="course-1.html">Course 1</a>
+      <a class="chip" href="course-2.html">Course 2</a>
+      <a class="chip" href="course-3.html">Course 3</a>
+      <a class="chip" href="course-4.html">Course 4</a>
+      <a class="chip" href="course-5.html">Course 5</a>
+      <a class="btn" href="index.html#waitlist">Join Waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="grid">
+    <div class="card col-8">
+      <span class="badge">Course 1</span>
+      <h1 style="font-size:36px; margin-bottom:10px;">Course 1 Title</h1>
+      <p class="sub">Outcome: what will someone be able to do after completing this course?</p>
+
+      <hr class="sep" />
+
+      <h2>Lessons</h2>
+      <p class="sub">Replace these with your real modules and lesson names.</p>
+
+      <div class="courseList" style="grid-template-columns: 1fr;">
+        <div class="courseCard">
+          <h3>Lesson 1: Quick Win</h3>
+          <p class="sub">Short description of what they learn.</p>
+        </div>
+        <div class="courseCard">
+          <h3>Lesson 2: Core Framework</h3>
+          <p class="sub">Short description of what they learn.</p>
+        </div>
+        <div class="courseCard">
+          <h3>Lesson 3: Implementation</h3>
+          <p class="sub">Short description of what they learn.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+        <a class="btn" href="#">Start Lesson 1</a>
+        <a class="ghost" href="index.html">Back to Home</a>
+      </div>
+    </div>
+
+    <aside class="card col-4">
+      <h3>Resources</h3>
+      <p class="sub">Add downloads and links here.</p>
+      <div class="courseList" style="grid-template-columns: 1fr;">
+        <a class="courseCard" href="#"><b>Template 1</b><div class="small">Link placeholder</div></a>
+        <a class="courseCard" href="#"><b>Checklist</b><div class="small">Link placeholder</div></a>
+        <a class="courseCard" href="#"><b>Notes</b><div class="small">Link placeholder</div></a>
+      </div>
+
+      <hr class="sep" />
+
+      <h3>Payments (later)</h3>
+      <p class="sub">
+        Placeholder for crypto payments. Later we can integrate a hosted checkout link or embed a crypto invoice.
+      </p>
+      <a class="ghost" href="index.html#waitlist">Join waitlist for access</a>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> My Online School
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
