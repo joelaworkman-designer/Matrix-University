@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Online School</title>
+  <meta name="description" content="A subscription-based online school with 5 courses." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="dot"></span>
+      <span>My Online School</span>
+    </a>
+    <div class="navlinks">
+      <a class="chip" href="course-1.html">Course 1</a>
+      <a class="chip" href="course-2.html">Course 2</a>
+      <a class="chip" href="course-3.html">Course 3</a>
+      <a class="chip" href="course-4.html">Course 4</a>
+      <a class="chip" href="course-5.html">Course 5</a>
+      <a class="btn" href="#waitlist">Join Waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="card">
+      <h1>5 courses. One school.</h1>
+      <p class="sub">This is your course hub. Each course has its own page with lessons, resources, and a future payments area for crypto checkout later.</p>
+      <div class="kpis">
+        <div class="kpi">5 Separate Course Pages</div>
+        <div class="kpi">Waitlist Now</div>
+        <div class="kpi">Crypto Payments Later</div>
+        <div class="kpi">Mobile Friendly</div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+        <a class="btn" href="course-1.html">Start with Course 1</a>
+        <a class="ghost" href="#courses">Browse All Courses</a>
+      </div>
+    </div>
+
+    <div class="card" id="waitlist">
+      <h3>Join the waitlist</h3>
+      <p class="sub">No payment yet. This emails you a signup request you can track in your inbox.</p>
+
+      <label for="email">Email</label>
+      <input id="email" placeholder="you@example.com" />
+
+      <div style="height:10px;"></div>
+
+      <label for="interest">What are you most interested in?</label>
+      <textarea id="interest" rows="4" placeholder="Course 1, Course 3, etc."></textarea>
+
+      <div style="height:12px;"></div>
+
+      <a class="btn" href="#" onclick="joinWaitlist(); return false;">Submit</a>
+      <div class="small" style="margin-top:10px;">Later you can replace this with a real form (ConvertKit, Beehiiv, HubSpot, etc.).</div>
+    </div>
+  </section>
+
+  <section id="courses" class="grid">
+    <div class="card col-12">
+      <h2>Courses</h2>
+      <p class="sub">Rename these titles and outcomes to match your real curriculum.</p>
+
+      <div class="courseList">
+        <a class="courseCard" href="course-1.html">
+          <span class="badge">Course 1</span>
+          <h3>Course 1 Title</h3>
+          <p class="sub">Outcome statement for Course 1.</p>
+        </a>
+
+        <a class="courseCard" href="course-2.html">
+          <span class="badge">Course 2</span>
+          <h3>Course 2 Title</h3>
+          <p class="sub">Outcome statement for Course 2.</p>
+        </a>
+
+        <a class="courseCard" href="course-3.html">
+          <span class="badge">Course 3</span>
+          <h3>Course 3 Title</h3>
+          <p class="sub">Outcome statement for Course 3.</p>
+        </a>
+
+        <a class="courseCard" href="course-4.html">
+          <span class="badge">Course 4</span>
+          <h3>Course 4 Title</h3>
+          <p class="sub">Outcome statement for Course 4.</p>
+        </a>
+
+        <a class="courseCard" href="course-5.html">
+          <span class="badge">Course 5</span>
+          <h3>Course 5 Title</h3>
+          <p class="sub">Outcome statement for Course 5.</p>
+        </a>
+
+        <div class="courseCard">
+          <span class="badge">Coming soon</span>
+          <h3>Bonus resources</h3>
+          <p class="sub">Templates, scripts, and replays (add later).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> My Online School
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  function joinWaitlist(){
+    const email = document.getElementById("email").value.trim();
+    const interest = document.getElementById("interest").value.trim();
+
+    const to = "YOUR_EMAIL_HERE@example.com"; // change this
+    const subject = encodeURIComponent("Waitlist signup");
+    const body = encodeURIComponent(
+      "New waitlist signup:\n\nEmail: " + (email || "[not provided]") +
+      "\nInterest: " + (interest || "[not provided]") +
+      "\n\nSent from the website waitlist form."
+    );
+
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  }
+</script>
+
+</body>
+</html>
